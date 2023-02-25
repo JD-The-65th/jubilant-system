@@ -31,7 +31,10 @@ jobs:
       # - run: flutter test # Run widget tests for our flutter project.I'm not run for now.
 
       # build apk and app file
-      - run: flutter build apk --release --split-per-abi
+      - run: |
+          rm /home/runner/.gradle/daemon/4.10.2/gradle/wrapper/gradle-wrapper.properties
+          cp android/gradle/wrapper/ gradle-wrapper.properties /home/runner/.gradle/daemon/4.10.2/gradle/wrapper/gradle-wrapper.properties
+          flutter build apk --release --split-per-abi
 #       - run: |
 #           flutter build ios --no-codesign
 #           cd build/ios/iphoneos
