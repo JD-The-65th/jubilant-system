@@ -21,8 +21,8 @@ jobs:
       # Setup the flutter environment.
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'beta' # 'dev', 'master', default to: 'stable'
-          flutter-version: '2.12.0-4.2.pre' # this is your flutter version<make sure your flutter version>
+          channel: 'stable' # 'dev', 'master', default to: 'stable'
+          flutter-version: '1.22.6' # this is your flutter version<make sure your flutter version>
       - run: flutter pub get
 
       # - run: flutter test # Run widget tests for our flutter project.I'm not run for now.
