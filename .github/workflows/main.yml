@@ -23,6 +23,9 @@ jobs:
         with:
           channel: 'stable' # 'dev', 'master', default to: 'stable'
           flutter-version: '2.2.0' # this is your flutter version<make sure your flutter version>
+      - uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 6.5 
       - run: flutter pub get
 
       # - run: flutter test # Run widget tests for our flutter project.I'm not run for now.
