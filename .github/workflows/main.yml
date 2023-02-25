@@ -32,7 +32,6 @@ jobs:
 
       # build apk and app file
       - run: |
-          cp android/gradle/wrapper/ gradle-wrapper.properties /home/runner/.gradle/daemon/4.10.2/gradle/wrapper/gradle-wrapper.properties
           flutter build apk --release --split-per-abi
 #       - run: |
 #           flutter build ios --no-codesign
